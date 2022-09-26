@@ -5,8 +5,13 @@
 }
 :root{
   font-size: 62.5%;
-  --ff-primary: 'Poppins', sans-serif;
-  --text-color: #303030;
-  --hue: 194;
-  --primary-color: hsl(var(--hue), 100%, 63%);
+  --ff-primary: 'Rubik', sans-serif;
+  --hue: 271;
+  --primary-color: hsl(var(--hue), 81%, 45%);
+  --secondary-color: hsl(172, 78%, 52%);
+  --body-color: hsl(var(--hue), 85%, 62%);
+  --app-color: hsl(var(--hue), 52%, 88%);
+  --card-color: hsl(var(--hue), 33%, 80%);
+  --text-primary-color: hsl(var(--hue), 82%, 29%);
+  --text-secondary-color: hsl(var(--hue), 52%, 88%);
 }
