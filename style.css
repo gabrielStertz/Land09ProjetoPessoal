@@ -9,36 +9,177 @@
   --hue: 271;
   --primary-color: hsl(var(--hue), 81%, 45%);
   --secondary-color: hsl(172, 78%, 52%);
-  --body-color: hsl(var(--hue), 85%, 62%);
+  --body-color: hsl(var(--hue), 33%, 80%);
   --app-color: hsl(var(--hue), 52%, 88%);
-  --card-color: hsl(var(--hue), 33%, 80%);
+  --card-color: hsl(var(--hue), 85%, 62%);
   --text-primary-color: hsl(var(--hue), 82%, 29%);
   --text-secondary-color: hsl(var(--hue), 52%, 88%);
 }
-body{
-  font-size: 1.6rem;
+body, a, button{
+  font-family: var(--ff-primary);
+  color: var(--text-primary-color);
 }
-#brand img{
-  width: 10rem;
-  height: 10rem;
-  border-radius: 9999px;
+body{
+  min-height: 100vh;
+  font-size: 1.6rem;
+  background: var(--body-color);
+  display: grid;
+  place-content: center;
+  padding: 1rem;
+}
+#app{
+  background: var(--app-color);
+  padding: 1rem;
+  border-radius: 2rem;
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#controls{
+  max-width: 25rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#up{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+#brand{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+#brand svg{
+  width: 5rem;
+  height: 5rem;
+}
+#brand svg path{
+  fill: var(--text-primary-color);
 }
 #pages{
+  padding: 1rem;
 }
 #pages button{
   border: none;
-  background: none;
+  padding-bottom: 1rem;
+  background: transparent;
   display: flex;
   align-items: center;
-  color: var(--text-primary-color);
+  gap: 1rem;
+  font-size: 1.6rem;
+  cursor: pointer;
 }
 #pages button svg{
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 #pages button svg path.cls-1, #pages button svg circle.cls-2{
   fill: var(--text-primary-color);
 }
 #pages button svg path.cls-3{
   fill: var(--app-color);
+}
+#settings{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+#settings svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+#settings svg path{
+  fill: var(--text-primary-color);
+}
+#main-data{
+  max-width: 50rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 2rem;
+  padding: 1rem;
+}
+#bills-info{
+  display: flex;
+  flex-direction: column;
+}
+#wrapper{
+  display: flex;
+  gap: 1rem;
+}
+#bills-info fieldset{
+  width: 100%;  
+  padding: 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  font-size: 1.4rem;
+}
+fieldset legend{
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+#bills-card fieldset{
+  max-height: 50rem;
+  max-width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  gap: 1rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 1rem;
+}
+#bills-card fieldset legend{
+  font-size: 2rem;
+  font-weight: 600;
+}
+.bill-card{
+  height: 30%;
+  width: 100%;
+  background: var(--card-color);
+  color: var(--app-color);
+  border-radius: 2rem;
+  padding: 1rem;
+  position: relative;
+}
+.bill-card h2{
+  font-size: 2rem;
+}
+.hide{
+  display: none;
+}
+#tag{
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: rgb(57, 192, 23);
+  color: black;
+  padding: .7rem;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+}
+#tag.red{
+  background: rgb(230, 33, 33);
+}
+#tag.yellow{
+  background: rgb(206, 171, 16);
+}
+#complement{
+  max-width: 25rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 2rem;
+  padding: 1rem;
 }
