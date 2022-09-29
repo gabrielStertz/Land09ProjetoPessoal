@@ -8,7 +8,7 @@
   --ff-primary: 'Rubik', sans-serif;
   --hue: 271;
   --primary-color: hsl(var(--hue), 81%, 45%);
-  --secondary-color: hsl(172, 78%, 52%);
+  --secondary-color: hsl(263, 56%, 83%);
   --body-color: hsl(var(--hue), 33%, 80%);
   --app-color: hsl(var(--hue), 52%, 88%);
   --card-color: hsl(var(--hue), 85%, 62%);
@@ -22,7 +22,7 @@ body, a, button{
 body{
   min-height: 100vh;
   font-size: 1.6rem;
-  background: var(--body-color);
+  background: var(--text-primary-color);
   display: grid;
   place-content: center;
   padding: 1rem;
@@ -32,14 +32,11 @@ body{
   padding: 1rem;
   border-radius: 2rem;
   display: flex;
-  /* justify-content: center; */
   flex-wrap: wrap;
   gap: 1rem;
 }
 #controls{
   max-width: 25rem;
-  border: 2px solid var(--primary-color);
-  border-radius: 2rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -105,8 +102,6 @@ body{
 }
 #main-data{
   max-width: 50rem;
-  border: 2px solid var(--primary-color);
-  border-radius: 2rem;
   padding: 1rem;
 }
 #bills-info{
@@ -120,7 +115,8 @@ body{
 #bills-info fieldset{
   width: 100%;  
   padding: 1rem;
-  border: 2px solid var(--primary-color);
+  background: var(--secondary-color);
+  border: none;
   border-radius: 1rem;
   display: flex;
   justify-content: right;
@@ -150,13 +146,21 @@ fieldset legend{
   height: 30%;
   width: 100%;
   background: var(--card-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   color: var(--app-color);
+  border: none;
   border-radius: 2rem;
   padding: 1rem;
   position: relative;
+  cursor: pointer;
 }
 .bill-card h2{
   font-size: 2rem;
+}
+.bill-card p, .bill-card p span{
+  font-size: 1.5rem;
 }
 .hide{
   display: none;
@@ -179,7 +183,16 @@ fieldset legend{
 }
 #complement{
   max-width: 25rem;
-  border: 2px solid var(--primary-color);
-  border-radius: 2rem;
   padding: 1rem;
+}
+#complement fieldset{
+  width: 100%;  
+  padding: 1rem;
+  background: var(--secondary-color);
+  border: none;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  font-size: 1.4rem;
 }
