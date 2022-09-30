@@ -1,0 +1,23 @@
+{
+  "name": "land_09_proj_pessoal",
+  "version": "1.0.0",
+  "description": "## Project of a Page to keep your payments up to date",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielStertz/Land09ProjetoPessoal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielStertz/Land09ProjetoPessoal/issues"
+  },
+  "homepage": "https://github.com/gabrielStertz/Land09ProjetoPessoal#readme",
+  "dependencies": {
+    "fullcalendar": "^5.11.3"
+  }
+}
