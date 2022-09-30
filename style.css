@@ -10,12 +10,13 @@
   --primary-color: hsl(var(--hue), 81%, 45%);
   --secondary-color: hsl(263, 56%, 83%);
   --body-color: hsl(var(--hue), 33%, 80%);
+  --background-pages: hsla(var(--hue), 81%, 12%, 0.8);
   --app-color: hsl(var(--hue), 52%, 88%);
   --card-color: hsl(var(--hue), 85%, 62%);
   --text-primary-color: hsl(var(--hue), 82%, 29%);
   --text-secondary-color: hsl(var(--hue), 52%, 88%);
 }
-body, a, button{
+body, a, button, input{
   font-family: var(--ff-primary);
   color: var(--text-primary-color);
 }
@@ -28,6 +29,7 @@ body{
   padding: 1rem;
 }
 #app{
+  width: clamp(25rem, 75vw, 105rem);
   background: var(--app-color);
   padding: 1rem;
   border-radius: 2rem;
@@ -36,7 +38,7 @@ body{
   gap: 1rem;
 }
 #controls{
-  max-width: 25rem;
+  width: clamp(25rem, 90vw, 50rem);
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -78,12 +80,6 @@ body{
   width: 2.5rem;
   height: 2.5rem;
 }
-#pages button svg path.cls-1, #pages button svg circle.cls-2{
-  fill: var(--text-primary-color);
-}
-#pages button svg path.cls-3{
-  fill: var(--app-color);
-}
 #pages button svg path{
   fill: var(--text-primary-color);
 }
@@ -104,7 +100,7 @@ body{
   fill: var(--text-primary-color);
 }
 #main-data{
-  max-width: 50rem;
+  width: clamp(25rem, 90vw, 68rem);
   padding: 1rem;
 }
 #bills-info{
@@ -165,9 +161,7 @@ fieldset legend{
 .bill-card p, .bill-card p span{
   font-size: 1.2rem;
 }
-.hide{
-  display: none;
-}
+
 #tag{
   position: absolute;
   bottom: 1rem;
@@ -185,7 +179,7 @@ fieldset legend{
   background: rgb(206, 171, 16);
 }
 #complement{
-  max-width: 25rem;
+  width: clamp(25rem, 90vw, 50rem);
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -205,6 +199,7 @@ fieldset legend{
 #calendar{
   width: 24rem;
   height: 45rem;
+  padding-top: 2rem;
 }
 #calendar .fc-header-toolbar{
   flex-direction: column;
@@ -230,4 +225,83 @@ fieldset legend{
   place-content: center;
   background: var(--text-primary-color);
   border: none;
+}
+#add-debts-account{
+  display: grid;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  place-content: center;
+  background: var(--background-pages);
+}
+#debts{
+  background: var(--app-color);
+  border-radius: 2rem;
+  padding: 10rem;
+  position: relative;
+}
+#title-wrapper{
+  width: 100%;
+  display: grid;
+  place-content: center;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  font-size: 2.1rem;
+}
+#input-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+#input-wrapper p{
+  font-size: 2rem;
+}
+#input-wrapper input{
+  border: none;
+  border-radius: .7rem;
+  padding: 1rem;
+}
+#debts #save-button{
+  width: 100%;
+  margin-top: 2rem;
+  font-size: 2rem;
+  padding: 1rem;
+  border: none;
+  border-radius: .7rem;
+  background: var(--text-primary-color);
+  color: var(--text-secondary-color);
+  cursor: pointer;
+}
+#close-button{
+  background: transparent;
+  border: none;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+#close-button svg{
+  height: 2rem;
+  width: 2rem;
+}
+#close-button svg path{
+  fill: var(--text-primary-color);
+}
+.hide{
+  display: none;
+}
+@media(min-width: 700px){
+  #controls{
+    width: clamp(19rem, 25vw, 25rem);
+  }
+  #main-data{
+    width: clamp(19rem, 34vw, 50rem);
+  }
+  #complement{
+    width: clamp(23rem, 25vw, 25rem);
+  }
 }
